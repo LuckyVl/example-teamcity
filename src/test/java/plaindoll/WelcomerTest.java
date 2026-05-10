@@ -31,11 +31,12 @@ public class WelcomerTest {
 		assertThat(welcomer.saySome(), containsString("something"));
 	}
 	@Test
-    void testHunterReplyContainsHunter() {
-        Welcomer welcomer = new Welcomer();
-        for (int i = 0; i < 10; i++) {
-            String reply = welcomer.getHunterReply();
-            assertTrue(reply.toLowerCase().contains("hunter"), "Reply should contain 'hunter', got: " + reply);
-        }
-    }
+	public void testHunterReplyContainsHunter() {
+		Welcomer welcomer = new Welcomer();
+		for (int i = 0; i < 10; i++) {
+			String reply = welcomer.getHunterReply();
+			// В JUnit 4 сообщение идёт ПЕРЕД условием
+			assertTrue("Reply should contain 'hunter', got: " + reply, reply.toLowerCase().contains("hunter"));
+		}
+	}
 }
