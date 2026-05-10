@@ -22,4 +22,5 @@ public class Welcomer{
             "A wise hunter prepares before the hunt."
         };
         return replies[new java.util.Random().nextInt(replies.length)];
+    }
 }
