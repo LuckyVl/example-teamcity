@@ -1,6 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
+import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
@@ -57,6 +58,11 @@ object Build : BuildType({
             name = "maven deploy"
             id = "maven2"
             goals = "clean deploy"
+        }
+    }
+
+    triggers {
+        vcs {
         }
     }
 
