@@ -19,7 +19,7 @@ public class Welcomer{
             "Only a true hunter knows the way.",
             "hunter mode: activated",
             "Every hunter needs a good weapon.",
-            "A wise hunter prepares before the hunt."
+            "A wise hunter prepares before the hunt!"
         };
         return replies[new java.util.Random().nextInt(replies.length)];
     }
