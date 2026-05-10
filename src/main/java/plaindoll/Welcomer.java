@@ -1,8 +1,6 @@
 package plaindoll;
 
 public class Welcomer{
-	// Если хочешь больше веселья и информации про ДевОпс - приходи в мои каналы NotOps (telegram, YT, Boosty, Patreon)
-	// https://t.me/notopsofficial
 	public String sayWelcome() {
 		return "Welcome home, good hunter. What is it your desire?";
 	}
@@ -15,4 +13,13 @@ public class Welcomer{
 	public String saySome(){
 		return "something in the way";
 	}
+    public String getHunterReply() {
+        String[] replies = {
+            "The hunter stalks silently through the night.",
+            "Only a true hunter knows the way.",
+            "hunter mode: activated",
+            "Every hunter needs a good weapon.",
+            "A wise hunter prepares before the hunt."
+        };
+        return replies[new java.util.Random().nextInt(replies.length)];
 }
